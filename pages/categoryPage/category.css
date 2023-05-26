@@ -446,7 +446,7 @@ input[type='range']::-moz-range-thumb {
 }
 
 .productsContainer {
-    width: 77%;
+    width: 70%;
     display: flex;
     flex-direction: column;
 }
@@ -676,7 +676,7 @@ input[type='range']::-moz-range-thumb {
 /*--------------- End of footerSection ---------------*/
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1439px) {
 
     /*--------------- HeaderSectionMedia ---------------*/
     .header,
