@@ -1,0 +1,47 @@
+[
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Cotton Polo Shirt",
+    "price": "$29.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Jewel Textured Dress",
+    "price": "$160.00 "
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Grey Slim Shirt",
+    "price": "$265.00 "
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Textured Sweater",
+    "price": "$160.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Basic Cotton Shirt",
+    "price": "$54.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Slim-Fit Polo Shirt",
+    "price": "$265.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Straight Alice Jeans",
+    "price": "$254.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Cool Wool Suit",
+    "price": "$160.00"
+  },
+  {
+    "image": "../../assets/images/CottonPoloTShirt.webp",
+    "name": "Hodded Cottom Parka",
+    "price": "$265.00"
+  }
+]

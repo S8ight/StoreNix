@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+html, body {
+    margin: 0;
+    width: 100%;
+    padding-right: 0;
+    box-sizing: border-box
+}
+
+/*--------------- HeaderSection ---------------*/
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 60%;
+    padding: 2em 0;
+    align-items: center;
+    gap: 5%;
+}
+
+.hamburgerMenu {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 1.1em;
+    height: 0.125em;
+    margin: 0.313em auto;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.headerList {
+    display: flex;
+}
+
+.headerList ul {
+    padding: 0;
+}
+
+.headerListElement {
+    display: flex;
+    align-items: center;
+    padding: 0 0.8em;
+}
+
+.headerTextLink {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+}
+
+.headerLogo,
+.headerPhoneLogo{
+    display: inline;
+    font-size: 2em;
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
+    padding: 0 1em;
+}
+
+.headerPhoneLogo {
+    display: none;
+}
+
+.headerIcons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;
+    gap: 15%;
+}
+
+.headerIcon {
+    width: 1.3em;
+    height: 80%;
+    padding-right: 0.5em;
+}
+
+/*--------------- End of headerSection ---------------*/
+
+/*--------------- InformationSection ---------------*/
+
+.informationBlock {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: flex-start;
+    padding-right: 0;
+    background-color: #eff1f3;
+}
+
+.informationContainer {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    gap: 5%;
+}
+
+.mainText {
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    padding: 1em 0;
+    white-space: nowrap;
+}
+
+.mainText p {
+    padding: 0 0.3em 0 0;
+    margin: 0;
+}
+
+.mainText hr {
+    margin: 0;
+    float: right;
+    width: 40%;
+    border-top: 5px solid #cb0d0d;
+}
+
+.pathText {
+    display: flex;
+    align-items: center;
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.pathSubText {
+    color: #aaaaaa;
+}
+/*--------------- End of informationSection---------------*/
+
+/*--------------- filtersSection ---------------*/
+
+.filtersContainer {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.filterBlock {
+    border-bottom: solid 1px #eff1f3;
+    padding-bottom: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.filterBlock p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #222;
+    margin-top: 0;
+}
+
+.overlay {
+    display: none;
+}
+
+/* --- categoriesSelection --- */
+
+.filterBlock ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.filterBlock button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.filterBlock button p {
+    margin: 5px 5px 5px 0;
+    color: #222;
+}
+
+.filterIcon {
+    width: 5%;
+}
+
+.categoriesSubList {
+    width: 98%;
+    padding: 0.8em 0 0.4em 0;
+    display: none;
+    cursor: pointer;
+}
+
+.subListElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 18px;
+}
+
+.subListElement p,
+.subListElement span {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #222;
+}
+
+.subListElement p {
+    display: flex;
+    align-content: center;
+    margin: 5px 0;
+    padding-bottom: 0.4em;
+}
+
+/* --- colorSelection --- */
+
+.colorRow {
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+.colorCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background-color: #ababad;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.colorCheckbox:checked {
+    border: 2px solid #666;
+}
+
+/* --- brandSelection --- */
+
+.brandFilters {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandFilters label {
+    display: flex;
+    align-items: center;
+    margin: 0.2em 0;
+}
+
+.brandFilters span {
+    margin: 5px 0 0 10px;
+}
+
+.checkMarkCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.checkMarkCheckbox:checked::before {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    color: #222;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* --- priceSelection --- */
+
+.priceFilter {
+    padding-top: 1em;
+}
+
+.priceInput {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 5%;
+}
+
+.priceField {
+    display: flex;
+    width: 10%;
+    margin-top: -2px;
+}
+
+.priceField input {
+    outline: none;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.8em;
+    color: #666;
+    -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.priceSeparator {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.priceSlider {
+    height: 3px;
+    left: 2px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.priceProgress {
+    display: flex;
+    height: 3px;
+    background-color: #222;
+    position: absolute;
+    left: 0;
+    right: 25%;
+}
+
+.rangeInput {
+    position: relative;
+}
+
+.rangeInput input {
+    position: absolute;
+    height: 3px;
+    top: -5px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    height: 13px;
+    width: 13px;
+    background-color: #222;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    border-radius: 50%;
+}
+
+input[type='range']::-moz-range-thumb {
+    height: 13px;
+    width: 13px;
+    border: none;
+    background-color: #222;
+    pointer-events: auto;
+    -moz-appearance: none;
+    border-radius: 50%;
+}
+
+/* --- featuredItems --- */
+
+.featuredBlock {
+    padding-bottom: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.featuredBlock p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #222;
+    margin: 0;
+}
+
+.featuredItemCard {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eff1f3;
+    padding: 1.5em 0;
+    height: 30%;
+}
+
+.featuredItemPhoto {
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+}
+
+.featuredItemInfo {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+}
+
+.featuredItemInfo .featuredItemPrice,
+.featuredItemInfo .featuredItemName {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 0.825em;
+    color: #aaa;
+}
+
+.featuredItemInfo .featuredItemName {
+    color: #222;
+}
+
+.ratingIcons {
+    font-size: 0.725em;
+}
+
+.ratingIcons,
+.featuredItemPrice,
+.featuredItemName {
+    flex-grow: 1;
+}
+
+/*--------------- End of filtersSection ---------------*/
+
+/*--------------- productsSection ---------------*/
+
+.productsBlock {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 60%;
+    padding: 4em 0;
+    gap: 5%;
+}
+
+.productsContainer {
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterButton {
+    display: none;
+    color: #666;
+    font-family: 'Rubik', serif;
+    font-size: 0.85em;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+
+.sorting {
+    display: flex;
+    max-width: 100%;
+    gap: 2em;
+}
+
+.sortSelector {
+    color: #666;
+    font-family: 'Rubik', sans-serif;
+    padding: 1em 3em 1em 1.5em;
+    border: 2px solid #ddd;
+    border-radius: 0;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    max-width: 100%;
+    background-image: url("../../assets/icons/angle-down.svg");
+    background-size: 7%;
+    background-position: 90%;
+    background-repeat: no-repeat;
+}
+
+.sortSelector:focus {
+    outline: none;
+    border: 2px solid #222;
+    border-radius: 0;
+}
+
+.productsView {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.iconView {
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2px;
+}
+
+.iconView img {
+    height: 40%;
+    padding: 0.8em;
+}
+
+.productCountInfo {
+    display: flex;
+    margin-left: 2em;
+}
+
+.productCountInfo p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.productCardsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-top: 4em;
+    border-bottom: solid 1px #eff1f3;
+    padding-bottom: 1em;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.productImage {
+    height: 100%;
+    max-height: 100%;
+}
+
+.productInfo {
+    padding: 2em 0;
+}
+
+.productName {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #222;
+}
+
+.productPrice {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.productsLoader {
+    width: 100%;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    color: #666666;
+    padding: 4em 0;
+}
+
+/*--------------- End of productsSection ---------------*/
+
+/*--------------- FooterSection ---------------*/
+
+.footer {
+    width: 100%;
+}
+
+.footerInformationContainer {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    gap: 20%;
+}
+
+.footerContactInfo {
+    width: 35%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footerLogo {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.footerAddress {
+    font-size: 1em;
+    color: #666666;
+}
+
+.footerPhone {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #666666;
+    padding: 0.5em 0;
+}
+
+.footerSocialIcons {
+    color: #ccc;
+    font-size: 1.5em;
+    display: flex;
+    gap: 1.5em;
+}
+
+.footerSubInfo {
+    display: flex;
+    width: 100%;
+    gap: 20%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footerSubColon p {
+    color: #222222;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-bottom: 1em;
+}
+
+.footerSubColonList {
+    color: #666666;
+    padding-bottom: 1em;
+    font-size: 0.9em;
+    margin-left: -25px;
+    white-space: nowrap;
+}
+
+.footerCopyrightSection {
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-top: 4em;
+}
+
+.footerCopyrightInfo {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 60%;
+    padding: 2.7em 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footerCopyrightText {
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.footerCopyrightIcons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+    font-size: 2em;
+    color: #666666;
+}
+
+.fa-brands {
+    margin-right: 0.25em;
+}
+
+/*--------------- End of footerSection ---------------*/
+
+
+@media (max-width: 1200px) {
+
+    /*--------------- HeaderSectionMedia ---------------*/
+    .header,
+    .informationContainer,
+    .productsBlock,
+    .footerInformationContainer,
+    .footerCopyrightInfo {
+        width: 90%;
+    }
+
+    .headerIcon {
+        width: 1.6em;
+    }
+
+    .headerPhoneLogo {
+        display: flex;
+    }
+
+    .hamburgerMenu {
+        visibility: visible;
+        z-index: 10;
+    }
+
+    .bar {
+        width: 2.2em;
+        height: 0.18em;
+        margin: 0.5em auto;
+    }
+
+    .hamburgerMenu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburgerMenu.active .bar:nth-child(1){
+        transform: translateY(0.55em) rotate(45deg);
+        position: fixed;
+    }
+
+    .hamburgerMenu.active .bar:nth-child(3){
+        transform: translateY(-0.6em) rotate(-45deg);
+        position: fixed;
+    }
+
+    .headerLogo {
+        display: none;
+    }
+
+    .headerList {
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        transition: 0.3s;
+    }
+
+    .headerList.active {
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        text-align: center;
+        margin: auto;
+        z-index: 5;
+        left: 0;
+    }
+
+    .headerListElement {
+        display: flex;
+        margin: 1em auto;
+        font-size: 2em;
+    }
+
+    /*--------------- End of headerSectionMedia ---------------*/
+
+    /*--------------- ProductsSectionMedia ---------------*/
+
+    .productsContainer {
+        width: 70%;
+    }
+
+    .productCard {
+        width: 45%;
+    }
+
+    .pathText {
+        padding-left: 0.5em;
+    }
+
+    /*--------------- End of productSectionMedia ---------------*/
+
+    /*--------------- FooterSectionMedia ---------------*/
+
+    .footerInformationContainer,
+    .footerSubInfo {
+        justify-content: start;
+    }
+
+    .footerInformationContainer,
+    .footerSubInfo {
+        flex-wrap: wrap;
+    }
+
+    .footerSubInfo {
+        justify-content: space-between;
+        margin-top: 3em;
+        gap: 10%;
+        width: 100%;
+    }
+
+    /*--------------- End of footerSectionMedia ---------------*/
+
+}
+
+@media (max-width: 767px) {
+
+    /*--------------- FiltersSectionMedia(mw:767px) ---------------*/
+    .optionsContainer {
+        flex-direction: column;
+    }
+
+    .informationContainer {
+        flex-wrap: wrap;
+        padding-bottom: 1em;
+    }
+
+    .mainText {
+        padding-bottom: 0.5em;
+    }
+
+
+    .filtersContainer {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        transition: 0.3s;
+    }
+
+    .filtersContainer.active {
+        padding: 2em;
+        z-index: 30;
+        width: 60%;
+        background-color: white;
+        margin: auto;
+        left: 0;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    .overlay.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200vh;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.6s;
+    }
+
+    .featuredBlock {
+        display: none;
+    }
+
+    .filterButton {
+        display: inline;
+        padding: 1em 2em;
+        margin-right: -1em;
+    }
+
+    .productCountInfo {
+        margin: 1em 0 0;
+    }
+
+    .sorting {
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    /*--------------- End of filtersSectionMedia(mw:767px) ---------------*/
+
+
+    /*--------------- Products/FooterSectionMedia(mw:767px) ---------------*/
+    .productsBlock {
+        padding-top: 3em;
+    }
+    .productsContainer,
+    .footerContactInfo {
+        width: 100%;
+    }
+
+
+    .footerCopyrightInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    /*--------------- End of products/footerSectionMedia(mw:767px) ---------------*/
+}
+
+@media (max-width: 402px) {
+
+    .mainText {
+        font-size: 2.5em;
+    }
+    .sorting {
+        flex-wrap: wrap;
+        width: 97%;
+    }
+
+    .filterButton,
+    .productsContainer,
+    .productCard {
+        width: 100%;
+    }
+
+    .footerSocialIcons {
+        font-size: 1.3em;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 345px) {
+
+    .headerIcons {
+        display: none;
+    }
+
+}
