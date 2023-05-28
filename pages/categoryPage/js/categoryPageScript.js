@@ -1,122 +1,168 @@
-// Header and filter sidebar logic
-const hamburger = document.querySelector(".hamburgerMenu");
-const navMenu = document.querySelector(".headerList");
-const filterButton = document.querySelector(".filterButton");
-const filterMenu = document.querySelector(".filtersContainer");
-const filterOverlay = document.querySelector(".overlay");
+addEventListenersForCategoriesButtons();
+hamburgerMenuLogic();
+filterMenuLogic();
+dynamicProductsLoading();
+priceSliderLogic();
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
+function addEventListenersForCategoriesButtons() {
+    const categoriesButtons = document.querySelectorAll(".categories-button");
 
-filterButton.addEventListener("click", () => {
-    filterMenu.classList.toggle("active");
-    filterOverlay.classList.toggle("active");
-})
+    categoriesButtons.forEach(button => {
+        button.addEventListener("click", e => {
+            const elementToToggle = document.getElementById(button.name);
 
-filterOverlay.addEventListener("click", () => {
-    filterMenu.classList.remove("active");
-    filterOverlay.classList.remove("active");
-})
-
-
-
-function openSubList(elementId) {
-    const elementToToggle = document.getElementById(elementId);
-
-    if (elementToToggle.style.display === "none") {
-        elementToToggle.style.display = "block";
-    }
-    else {
-        elementToToggle.style.display = "none";
-    }
+            if (elementToToggle.style.display === "none") {
+                elementToToggle.style.display = "block";
+            }
+            else {
+                elementToToggle.style.display = "none";
+            }
+        })
+    });
 }
 
 
-// Price slider logic
-const rangeInput = document.querySelectorAll(".rangeInput input"),
-    priceInput = document.querySelectorAll(".priceInput input"),
-    progress = document.querySelector(".priceSlider .priceProgress");
+function hamburgerMenuLogic() {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector(".header-list");
 
-let priceGap = 20;
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+}
 
-priceInput.forEach(input => {
-    input.addEventListener("input", e => {
 
-        let minVal = parseInt(priceInput[0].value),
-            maxVal = parseInt(priceInput[1].value);
+function filterMenuLogic() {
+    const filterButton = document.querySelector(".filter-button");
+    const filterMenu = document.querySelector(".filters-container");
+    const filterOverlay = document.querySelector(".overlay");
 
-        if((maxVal - minVal >= priceGap) && maxVal <= 500) {
-            if(e.target.className === "inputMinPrice") {
-                rangeInput[0].value = minVal;
-                progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+    filterButton.addEventListener("click", () => {
+        filterMenu.classList.toggle("active");
+        filterOverlay.classList.toggle("active");
+    })
+
+    filterOverlay.addEventListener("click", () => {
+        filterMenu.classList.remove("active");
+        filterOverlay.classList.remove("active");
+    })
+}
+
+
+function priceSliderLogic() {
+    const rangeInput = document.querySelectorAll(".range-input input"),
+        priceInput = document.querySelectorAll(".price-input input"),
+        progress = document.querySelector(".price-slider .price-progress");
+
+
+
+    let priceGap = 20;
+
+    priceInput.forEach(input => {
+        input.addEventListener("input", e => {
+
+            let minVal = parseInt(priceInput[0].value),
+                maxVal = parseInt(priceInput[1].value);
+
+            if((maxVal - minVal >= priceGap) && maxVal <= 500) {
+                if(e.target.className === "input-min-price") {
+                    rangeInput[0].value = minVal;
+                    progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                }
+                else {
+                    rangeInput[1].value = maxVal;
+                    progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            }
+        })
+    });
+
+    rangeInput.forEach(input => {
+        input.addEventListener("input", e => {
+
+            let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+
+            if(maxVal - minVal < priceGap) {
+                if(e.target.className === "range-min") {
+                    rangeInput[0].value = maxVal - priceGap;
+                }
+                else {
+                    rangeInput[1].value = minVal + priceGap;
+                }
             }
             else {
-                rangeInput[1].value = maxVal;
+                priceInput[0].value = minVal;
+                priceInput[1].value = maxVal;
+                progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
                 progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
             }
+        })
+    });
+}
+
+function setPriceGateForPriceFilter(products) {
+    let minPrice = Number.MAX_VALUE;
+    let maxPrice = Number.MIN_VALUE;
+
+    products.forEach(product => {
+        const price = parseFloat(product.price.replace('$', ''));
+        if (price < minPrice) {
+            minPrice = price;
         }
-    })
-});
-
-rangeInput.forEach(input => {
-    input.addEventListener("input", e => {
-
-        let minVal = parseInt(rangeInput[0].value),
-            maxVal = parseInt(rangeInput[1].value);
-
-        if(maxVal - minVal < priceGap) {
-            if(e.target.className === "rangeMin") {
-                rangeInput[0].value = maxVal - priceGap;
-            }
-            else {
-                rangeInput[1].value = minVal + priceGap;
-            }
+        if (price > maxPrice) {
+            maxPrice = price;
         }
-        else {
-            priceInput[0].value = minVal;
-            priceInput[1].value = maxVal;
-            progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-            progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-        }
-    })
-});
+    });
 
+    const rangeMinInput = document.querySelector('.range-min');
+    const rangeMaxInput = document.querySelector('.range-max');
 
-// Dynamic loading of products
-const productContainer = document.querySelector('.productCardsContainer');
-const jsonFileURL = '../../assets/products/products.json';
+    rangeMinInput.min = 0;
+    rangeMinInput.max = 500;
+    rangeMinInput.value = minPrice;
 
-fetch(jsonFileURL)
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'productCard';
+    rangeMaxInput.min = 0;
+    rangeMaxInput.max = 500;
+    rangeMaxInput.value = maxPrice;
+}
 
-            const productImage = document.createElement('img');
-            productImage.alt = 'productImage';
-            productImage.src = product.image;
+function dynamicProductsLoading() {
+    const productContainer = document.querySelector('.product-cards-container');
+    const jsonFileURL = '../../assets/products/products.json';
 
-            const productInfo = document.createElement('div');
-            productInfo.className = 'productInfo';
+    fetch(jsonFileURL)
+        .then(response => response.json())
+        .then(data => {
+            setPriceGateForPriceFilter(data);
+            data.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
 
-            const productName = document.createElement('p');
-            productName.className = 'productName';
-            productName.textContent = product.name;
+                const productImage = document.createElement('img');
+                productImage.alt = 'product-image';
+                productImage.src = product.image;
 
-            const productPrice = document.createElement('p');
-            productPrice.className = 'productPrice';
-            productPrice.textContent = product.price;
+                const productInfo = document.createElement('div');
+                productInfo.className = 'product-info';
 
-            productInfo.appendChild(productName);
-            productInfo.appendChild(productPrice);
-            productCard.appendChild(productImage);
-            productCard.appendChild(productInfo);
+                const productName = document.createElement('p');
+                productName.className = 'product-name';
+                productName.textContent = product.name;
 
-            productContainer.appendChild(productCard);
-        });
-    })
-    .catch(error => console.error('Can`t read JSON:', error));
+                const productPrice = document.createElement('p');
+                productPrice.className = 'product-price';
+                productPrice.textContent = product.price;
+
+                productInfo.appendChild(productName);
+                productInfo.appendChild(productPrice);
+                productCard.appendChild(productImage);
+                productCard.appendChild(productInfo);
+
+                productContainer.appendChild(productCard);
+            });
+        })
+        .catch(error => console.error('Can`t read JSON:', error));
+}
 

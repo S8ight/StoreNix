@@ -6,218 +6,221 @@
     <title>Categories</title>
     <link rel="stylesheet" type="text/css" href="./category.css">
     <script src="https://kit.fontawesome.com/5e5573fe57.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="header">
-    <div class="hamburgerMenu">
+    <div class="hamburger-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
 
-    <div class="headerPhoneLogo">StoreNix</div>
+    <div class="header-phone-logo">StoreNix</div>
 
-    <div class="headerList">
+    <div class="header-list">
 
-        <div class="headerListElement">
-            <a class="headerTextLink">Home</a>
+        <div class="header-list-element">
+            <a class="header-text-link">Home</a>
         </div>
-        <div class="headerListElement">
-            <a class="headerTextLink">Categories</a>
+        <div class="header-list-element">
+            <a class="header-text-link">Categories</a>
         </div>
-        <div class="headerListElement">
-            <a class="headerTextLink">Shop</a>
+        <div class="header-list-element">
+            <a class="header-text-link">Shop</a>
         </div>
 
-        <div class="headerLogo">StoreNix</div>
+        <div class="header-logo">StoreNix</div>
 
-        <div class="headerListElement">
-            <a class="headerTextLink">Pages</a>
+        <div class="header-list-element">
+            <a class="header-text-link">Pages</a>
         </div>
-        <div class="headerListElement">
-            <a class="headerTextLink">About</a>
+        <div class="header-list-element">
+            <a class="header-text-link">About</a>
         </div>
-        <div class="headerListElement">
-            <a class="headerTextLink">Contact</a>
+        <div class="header-list-element">
+            <a class="header-text-link">Contact</a>
         </div>
 
     </div>
 
-    <div class="headerIcons">
-        <img class="headerIcon" src="../../assets/icons/bag-shopping.svg" alt="bag-shopping">
-        <img class="headerIcon" src="../../assets/icons/magnifying-glass.svg" alt="magnifying-glass">
+    <div class="header-icons">
+        <img class="header-icon" src="../../assets/icons/bag-shopping.svg" alt="bag-shopping">
+        <img class="header-icon" src="../../assets/icons/magnifying-glass.svg" alt="magnifying-glass">
     </div>
 </div>
 
 
-<div class="informationBlock">
-    <div class="informationContainer">
-        <div class="mainText">
+<div class="information-block">
+    <div class="information-container">
+        <div class="main-text">
             <p>New Arrivals</p>
             <hr/>
         </div>
-        <div class="pathText">
-            <p> Home <span class="pathSubText"> > </span>
-                New Arrivals <span class="pathSubText"> > </span>
-                <span class="pathSubText"> T-Shirts & Casuals </span> </p>
+        <div class="path-text">
+            <p> Home <span class="path-sub-text"> > </span>
+                New Arrivals <span class="path-sub-text"> > </span>
+                <span class="path-sub-text"> T-Shirts & Casuals </span> </p>
         </div>
     </div>
 </div>
 
 
-<div class="productsBlock">
+<div class="products-block">
     <div class="overlay"></div>
 
-    <div class="filtersContainer">
+    <div class="filters-container">
 
-        <div class="filterBlock">
-            <p>CATEGORIES</p>
+        <div class="filter-block">
+            <p class="filter-block-name">categories</p>
             <ul>
-                <li><button onclick="openSubList('Arrivals')">
+                <li><button class="categories-button" name="arrivals">
 
-                    <p>New Arrivals</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                    <p class="category-name">New Arrivals</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Arrivals">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="arrivals">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
                     </div>
                 </li>
 
-                <li><button onclick="openSubList('Sellers')">
-                    <p>Best Sellers</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                <li><button  class="categories-button" name="sellers">
+                    <p class="category-name">Best Sellers</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Sellers">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="sellers">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
                     </div>
                 </li>
 
-                <li><button onclick="openSubList('Clothing')">
-                    <p>Clothing</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                <li><button  class="categories-button" name="clothing">
+                    <p class="category-name">Clothing</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Clothing">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="clothing">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
                     </div>
                 </li>
 
-                <li><button onclick="openSubList('Accessories')">
-                    <p>Accessories</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                <li><button  class="categories-button" name="accessories">
+                    <p class="category-name">Accessories</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Accessories">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="accessories">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
                     </div>
                 </li>
 
-                <li><button onclick="openSubList('Women')">
-                    <p>Women Items</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                <li><button  class="categories-button" name="women">
+                    <p class="category-name">Women Items</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Women">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="women">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
                     </div>
                 </li>
 
-                <li><button onclick="openSubList('Men')">
-                    <p>Men Products</p>
-                    <img class="filterIcon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
+                <li><button class="categories-button" name="men">
+                    <p class="category-name">Men Products</p>
+                    <img class="filter-icon" src="../../assets/icons/angle-down.svg" alt="arrow"/>
                 </button>
 
-                    <div class="categoriesSubList" id="Men">
-                        <div class="subListElement">
+                    <div class="categories-sub-list" id="men">
+                        <div class="sub-list-element">
                             <p>T-Shirts & Casuals</p>
                             <span>(25)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Coats & Jackets</p>
                             <span>(34)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Long Pants & Skirts</p>
                             <span>(9)</span>
                         </div>
-                        <div class="subListElement">
+                        <div class="sub-list-element">
                             <p>Jeans & Denims</p>
                             <span>(10)</span>
                         </div>
@@ -227,147 +230,147 @@
             </ul>
         </div>
 
-        <div class="filterBlock">
-            <p>COLOR</p>
-            <div class="colorFilters">
-                <div class="colorRow">
-                    <input type="checkbox" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #fff;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #000;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #51a909;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #497bee;" class="colorCheckbox"/>
+        <div class="filter-block">
+            <p class="filter-block-name">color</p>
+            <div class="color-filters">
+                <div class="color-row">
+                    <input type="checkbox" class="color-check-box"/>
+                    <input type="checkbox" class="color-check-box bg-white"/>
+                    <input type="checkbox" class="color-check-box bg-black"/>
+                    <input type="checkbox" class="color-check-box bg-green"/>
+                    <input type="checkbox" class="color-check-box bg-blue"/>
                 </div>
-                <div class="colorRow">
-                    <input type="checkbox" style="background-color: #fee479;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #f7931d;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #7b3a94;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #dd1cdf;" class="colorCheckbox"/>
-                    <input type="checkbox" style="background-color: #cc0d0d;" class="colorCheckbox"/>
+                <div class="color-row">
+                    <input type="checkbox" class="color-check-box bg-yellow"/>
+                    <input type="checkbox" class="color-check-box bg-orange"/>
+                    <input type="checkbox" class="color-check-box bg-purple"/>
+                    <input type="checkbox" class="color-check-box bg-pink"/>
+                    <input type="checkbox" class="color-check-box bg-red"/>
                 </div>
             </div>
         </div>
 
-        <div class="filterBlock">
-            <p>BRANDS</p>
-            <div class="brandFilters">
+        <div class="filter-block">
+            <p class="filter-block-name">brands</p>
+            <div class="brand-filters">
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>Calvin Klein</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>Zara</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>Adidas</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>Nike</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>Mango</span>
                 </label>
             </div>
         </div>
 
-        <div class="filterBlock">
-            <p>PRICE</p>
-            <div class="priceFilter">
-                <div class="priceSlider">
-                    <div class="priceProgress"></div>
+        <div class="filter-block">
+            <p class="filter-block-name">price</p>
+            <div class="price-filter">
+                <div class="price-slider">
+                    <div class="price-progress"></div>
                 </div>
-                <div class="rangeInput">
-                    <input type="range" class="rangeMin" min="0" max="500" value="0" step="10">
-                    <input type="range" class="rangeMax" min="0" max="500" value="370" step="10">
+                <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="500" value="0" step="10">
+                    <input type="range" class="range-max" min="0" max="500" value="370" step="10">
                 </div>
-                <div class="priceInput">
-                    <div class="priceField">
-                        <div class="priceSeparator">$</div>
-                        <input type="number" class="inputMinPrice" value="0">
+                <div class="price-input">
+                    <div class="price-field">
+                        <div class="price-separator">$</div>
+                        <input type="number" class="input-min-price" value="0">
                     </div>
-                    <div class="priceSeparator"> – </div>
-                    <div class="priceField">
-                        <div class="priceSeparator">$</div>
-                        <input type="number" class="inputMaxPrice" value="500">
+                    <div class="price-separator"> – </div>
+                    <div class="price-field">
+                        <div class="price-separator">$</div>
+                        <input type="number" class="input-max-price" value="500">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="filterBlock">
-            <p>SIZES</p>
-            <div class="brandFilters">
+        <div class="filter-block">
+            <p class="filter-block-name">sizes</p>
+            <div class="brand-filters">
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>XS</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>S</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>M</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>L</span>
                 </label>
                 <label>
-                    <input type="checkbox" class="checkMarkCheckbox">
+                    <input type="checkbox" class="check-mark-checkbox">
                     <span>XL</span>
                 </label>
             </div>
         </div>
 
-        <div class="featuredBlock">
-            <p>FEATURED ITEMS</p>
-            <div class="featuredItemCardsContainer">
+        <div class="featured-block">
+            <p class="filter-block-name">featured items</p>
+            <div class="featured-item-cards-container">
 
-                <div class="featuredItemCard">
-                    <img class="featuredItemPhoto" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
-                    <div class="featuredItemInfo">
-                        <p class="featuredItemName">Fias Key Chain</p>
-                        <p class="featuredItemPrice">$25.00</p>
-                        <div class="ratingIcons">
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #e1e1e1;"></i>
+                <div class="featured-item-card">
+                    <img class="featured-item-photo" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
+                    <div class="featured-item-info">
+                        <p class="featured-item-name">Fias Key Chain</p>
+                        <p class="featured-item-price">$25.00</p>
+                        <div class="rating-icons">
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star grey-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="featuredItemCard">
-                    <img class="featuredItemPhoto" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
-                    <div class="featuredItemInfo">
-                        <p class="featuredItemName">HighLander Boots</p>
-                        <p class="featuredItemPrice">$379.00</p>
-                        <div class="ratingIcons">
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #e1e1e1;"></i>
+                <div class="featured-item-card">
+                    <img class="featured-item-photo" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
+                    <div class="featured-item-info">
+                        <p class="featured-item-name">HighLander Boots</p>
+                        <p class="featured-item-price">$379.00</p>
+                        <div class="rating-icons">
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star grey-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="featuredItemCard">
-                    <img class="featuredItemPhoto" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
-                    <div class="featuredItemInfo">
-                        <p class="featuredItemName">After POMADE</p>
-                        <p class="featuredItemPrice">$79.00</p>
-                        <div class="ratingIcons">
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #f1c410;"></i>
-                            <i class="fa-solid fa-star" style="color: #e1e1e1;"></i>
+                <div class="featured-item-card">
+                    <img class="featured-item-photo" alt=featuredItemPhoto"" src="../../assets/images/CottonPoloTShirt.webp">
+                    <div class="featured-item-info">
+                        <p class="featured-item-name">After POMADE</p>
+                        <p class="featured-item-price">$79.00</p>
+                        <div class="rating-icons">
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star gold-star"></i>
+                            <i class="fa-solid fa-star grey-star"></i>
                         </div>
                     </div>
                 </div>
@@ -378,45 +381,45 @@
 
     </div>
 
-    <div class="productsContainer">
-        <div class="optionsContainer">
+    <div class="products-container">
+        <div class="options-container">
             <div class="sorting">
-                <div class="filterButton">Filters</div>
-                <select class="sortSelector">
-                    <option class="selectorOption"> Default Sorting </option>
-                    <option class="selectorOption"> By Max Price </option>
-                    <option class="selectorOption"> By Min Price </option>
+                <div class="filter-button">Filters</div>
+                <select class="sort-selector">
+                    <option class="selector-option"> Default Sorting </option>
+                    <option class="selector-option"> By Max Price </option>
+                    <option class="selector-option"> By Min Price </option>
                 </select>
-                <div class="productsView">
-                    <div class="iconView" id="plate">
+                <div class="products-view">
+                    <div class="icon-view" id="plate">
                         <img src="../../assets/icons/list.svg" alt="plate">
                     </div>
-                    <div class="iconView" id="list">
+                    <div class="icon-view" id="list">
                         <img src="../../assets/icons/grid-2.svg" alt="list">
                     </div>
                 </div>
             </div>
-            <div class="productCountInfo">
+            <div class="product-count-info">
                 <p> Showing 1-15 products of total 38 </p>
             </div>
         </div>
 
-        <div class="productCardsContainer">
+        <div class="product-cards-container">
             <!--            Products dynamically uploads to the page by script-->
         </div>
-        <div class="productsLoader">LOADING more items ...</div>
+        <div class="products-loader">LOADING more items ...</div>
     </div>
 </div>
 
 <div class="footer">
-    <div class="footerInformationContainer">
+    <div class="footer-information-container">
 
-        <div class="footerContactInfo">
-            <div class="footerLogo">StoreNix</div>
-            <p class="footerAddress">8863 Myrtle Ave, Ridgewood, NY, 11385<br/>
+        <div class="footer-contact-info">
+            <div class="footer-logo">StoreNix</div>
+            <p class="footer-address">8863 Myrtle Ave, Ridgewood, NY, 11385<br/>
                 shop@storenix.com</p>
-            <p class="footerPhone">1-718-441-5628</p>
-            <div class="footerSocialIcons">
+            <p class="footer-phone">1-718-441-5628</p>
+            <div class="footer-socialIcons">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-google-plus-g"></i>
                 <i class="fa-brands fa-twitter"></i>
@@ -424,46 +427,46 @@
                 <i class="fa-brands fa-youtube"></i>
             </div>
         </div>
-        <div class="footerSubInfo">
-            <div class="footerSubColon">
+        <div class="footer-sub-info">
+            <div class="footer-sub-colon">
                 <p>Information</p>
                 <ul>
-                    <li class="footerSubColonList">About StoreNix</li>
-                    <li class="footerSubColonList">Privacy Policy</li>
-                    <li class="footerSubColonList">My Cart</li>
-                    <li class="footerSubColonList">User Account</li>
-                    <li class="footerSubColonList">Warranty</li>
-                    <li class="footerSubColonList">Featured Categories</li>
+                    <li class="footer-sub-colon-list">About StoreNix</li>
+                    <li class="footer-sub-colon-list">Privacy Policy</li>
+                    <li class="footer-sub-colon-list">My Cart</li>
+                    <li class="footer-sub-colon-list">User Account</li>
+                    <li class="footer-sub-colon-list">Warranty</li>
+                    <li class="footer-sub-colon-list">Featured Categories</li>
                 </ul>
             </div>
-            <div class="footerSubColon">
+            <div class="footer-sub-colon">
                 <p>customer care</p>
                 <ul>
-                    <li class="footerSubColonList">Shipping</li>
-                    <li class="footerSubColonList">Order Tracking</li>
-                    <li class="footerSubColonList">Returns</li>
-                    <li class="footerSubColonList">Gift Cards</li>
-                    <li class="footerSubColonList">Contact us</li>
+                    <li class="footer-sub-colon-list">Shipping</li>
+                    <li class="footer-sub-colon-list">Order Tracking</li>
+                    <li class="footer-sub-colon-list">Returns</li>
+                    <li class="footer-sub-colon-list">Gift Cards</li>
+                    <li class="footer-sub-colon-list">Contact us</li>
                 </ul>
             </div>
-            <div class="footerSubColon">
+            <div class="footer-sub-colon">
                 <p>My Account</p>
                 <ul>
-                    <li class="footerSubColonList">Login</li>
-                    <li class="footerSubColonList">My WishList</li>
-                    <li class="footerSubColonList">Order History</li>
-                    <li class="footerSubColonList">Tracking</li>
-                    <li class="footerSubColonList">Help & FAQ’s</li>
+                    <li class="footer-sub-colon-list">Login</li>
+                    <li class="footer-sub-colon-list">My WishList</li>
+                    <li class="footer-sub-colon-list">Order History</li>
+                    <li class="footer-sub-colon-list">Tracking</li>
+                    <li class="footer-sub-colon-list">Help & FAQ’s</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="footerCopyrightSection">
-        <div class="footerCopyrightInfo">
-            <div class="footerCopyrightText">
+    <div class="footer-copyright-section">
+        <div class="footer-copyright-info">
+            <div class="footer-copyright-text">
                 © Copyrights 2017 StoreNix All rights reserved.
             </div>
-            <div class="footerCopyrightIcons">
+            <div class="footer-copyright-icons">
                 <i class="fa-brands fa-cc-visa"></i>
                 <i class="fa-brands fa-cc-mastercard"></i>
                 <i class="fa-brands fa-google-pay"></i>
