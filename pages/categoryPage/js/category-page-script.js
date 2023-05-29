@@ -202,25 +202,13 @@ function dynamicProductsLoading(products) {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
 
-        const productImage = document.createElement('img');
-        productImage.alt = 'product-image';
-        productImage.src = product.image.src;
-
-        const productInfo = document.createElement('div');
-        productInfo.className = 'product-info';
-
-        const productName = document.createElement('p');
-        productName.className = 'product-name';
-        productName.textContent = product.title;
-
-        const productPrice = document.createElement('p');
-        productPrice.className = 'product-price';
-        productPrice.textContent = product.variants[0].price+'$';
-
-        productInfo.appendChild(productName);
-        productInfo.appendChild(productPrice);
-        productCard.appendChild(productImage);
-        productCard.appendChild(productInfo);
+        productCard.innerHTML = `
+          <img src="${product.image.src}" alt="product-image">
+          <div class="product-info">
+            <p class="product-name">${product.title}</p>
+            <p class="product-price">${product.variants[0].price}$</p>
+          </div>
+        `;
 
         productContainer.appendChild(productCard);
     });
