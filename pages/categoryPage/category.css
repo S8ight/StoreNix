@@ -949,5 +949,8 @@ input[type='range']::-moz-range-thumb {
     .header-icons {
         display: none;
     }
-
+    .main-text,
+    .product-count-info p {
+        white-space: normal;
+    }
 }
