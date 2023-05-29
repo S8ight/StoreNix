@@ -198,7 +198,6 @@ async function getProducts() {
 function dynamicProductsLoading(products) {
     const productContainer = document.querySelector('.product-cards-container');
 
-    //setPriceGateForPriceFilter(products);
     products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
