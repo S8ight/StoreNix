@@ -10,7 +10,8 @@ html, body {
     margin: 0;
     width: 100%;
     padding-right: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 /*--------------- HeaderSection ---------------*/
@@ -58,7 +59,6 @@ html, body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: Rubik, sans-serif;
     font-weight: 300;
 }
 
@@ -66,7 +66,6 @@ html, body {
 .header-phone-logo{
     display: inline;
     font-size: 2em;
-    font-family: Rubik, sans-serif;
     font-weight: 500;
     padding: 0 1em;
 }
@@ -111,7 +110,6 @@ html, body {
 }
 
 .main-text {
-    font-family: Rubik, sans-serif;
     font-weight: 300;
     font-size: 3em;
     padding: 1em 0;
@@ -133,7 +131,6 @@ html, body {
 .path-text {
     display: flex;
     align-items: center;
-    font-family: Rubik, sans-serif;
     font-weight: 400;
     font-size: 1em;
 }
@@ -149,7 +146,6 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 25%;
-    font-family: 'Rubik', sans-serif;
 }
 
 .filter-block {
@@ -159,7 +155,6 @@ html, body {
 }
 
 .filter-block-name {
-    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -169,7 +164,7 @@ html, body {
 
 .category-name{
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: var(--primary-color);
     margin-top: 0;
 }
@@ -209,6 +204,7 @@ html, body {
     padding: 0.8em 0 0.4em 0;
     display: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .sub-list-element {
@@ -220,7 +216,6 @@ html, body {
 
 .sub-list-element p,
 .sub-list-element span {
-    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
     color: var(--primary-color);
@@ -359,7 +354,6 @@ html, body {
 .price-field input {
     outline: none;
     border: none;
-    font-family: 'Rubik', sans-serif;
     font-size: 0.8em;
     color: var(--text-color);
     -moz-appearance: textfield;
@@ -371,7 +365,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .price-separator {
-    font-family: 'Rubik', sans-serif;
     font-size: 0.8em;
     color: var(--text-color);
 }
@@ -389,7 +382,7 @@ input[type='number']::-webkit-outer-spin-button {
     background-color: var(--primary-color);
     position: absolute;
     left: 0;
-    right: 25%;
+    right: 100%;
 }
 
 .range-input {
@@ -433,7 +426,6 @@ input[type='range']::-moz-range-thumb {
 }
 
 .featured-block p {
-    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 1.2em;
     color: var(--primary-color);
@@ -462,7 +454,6 @@ input[type='range']::-moz-range-thumb {
 
 .featured-item-info .featured-item-price,
 .featured-item-info .featured-item-name {
-    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 0.825em;
     color: var(--secondary-color);
@@ -516,7 +507,6 @@ input[type='range']::-moz-range-thumb {
 .filter-button {
     display: none;
     color: var(--text-color);
-    font-family: 'Rubik', serif;
     font-size: 0.85em;
     border: 2px solid var(--border-color);
     text-align: center;
@@ -530,7 +520,6 @@ input[type='range']::-moz-range-thumb {
 
 .sort-selector {
     color: var(--text-color);
-    font-family: 'Rubik', sans-serif;
     padding: 1em 3em 1em 1.5em;
     border: 2px solid var(--border-color);
     border-radius: 0;
@@ -574,7 +563,6 @@ input[type='range']::-moz-range-thumb {
 }
 
 .product-count-info p {
-    font-family: 'Rubik', sans-serif;
     font-size: 0.9em;
     white-space: nowrap;
 }
@@ -599,6 +587,7 @@ input[type='range']::-moz-range-thumb {
 .product-image {
     height: 100%;
     max-height: 100%;
+    object-fit: cover;
 }
 
 .product-info {
@@ -607,7 +596,6 @@ input[type='range']::-moz-range-thumb {
 
 .product-name {
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     font-size: 1.2em;
     font-weight: 500;
     color: var(--primary-color);
@@ -615,7 +603,6 @@ input[type='range']::-moz-range-thumb {
 
 .product-price {
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     font-size: 0.8em;
     color: var(--secondary-color);
 }
@@ -623,7 +610,6 @@ input[type='range']::-moz-range-thumb {
 .products-loader {
     width: 100%;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     font-size: 1em;
     color: var(--text-color);
     padding: 4em 0;
@@ -646,7 +632,6 @@ input[type='range']::-moz-range-thumb {
 
 .footer-contact-info {
     width: 35%;
-    font-family: 'Rubik', sans-serif;
 }
 
 .footer-logo {
@@ -677,7 +662,6 @@ input[type='range']::-moz-range-thumb {
     display: flex;
     width: 100%;
     gap: 20%;
-    font-family: 'Rubik', sans-serif;
 }
 
 .footer-sub-colon p {
@@ -709,7 +693,6 @@ input[type='range']::-moz-range-thumb {
     justify-content: space-between;
     width: 60%;
     padding: 2.7em 0;
-    font-family: 'Rubik', sans-serif;
 }
 
 .footer-copyright-text {
